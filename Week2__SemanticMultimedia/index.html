@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pau's Corner | Web Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9FB;
+            color: #3A2930;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #8B3A62;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            margin: 6px 0 0;
+            font-size: 15px;
+        }
+        nav {
+            background-color: #F7D6E5;
+            padding: 14px;
+            margin-top: 25px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+        nav a {
+            color: #8B3A62;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        nav a:hover {
+            color: #3A2930;
+        }
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(139, 58, 98, 0.10);
+        }
+        h2 {
+            color: #8B3A62;
+            margin-top: 0;
+        }
+        figure {
+            text-align: center;
+            margin: 25px 0;
+        }
+        figure img {
+            width: 400px;
+            height: 100px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        figcaption {
+            margin-top: 8px;
+            color: #6F5962;
+            font-size: 14px;
+        }
+        #multimedia {
+            text-align: center;
+        }
+        #multimedia video {
+            width: 700px;
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+        footer {
+            background-color: #8B3A62;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+            nav ul {
+                gap: 18px;
+            }
+            section {
+                padding: 20px;
+            }
+            figure img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pau's Corner ♡</h1>
+        <p>BSIS Web Systems</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>A little note from yours truly (^///^)</h2> 
+            <p>
+This is Week 2 of my HTML laboratory activty! HTML5 introduces semantic elements and multimedia integration, making web pages more accessible and structured. </p>
+        </section>
+        <section id="multimedia">
+            <h2>Multimedia Features</h2>
+            <figure>
+                <img
+                    src="image1.jpg"
+                    alt="Placeholder image demonstrating multimedia">
+
+                <figcaption>
+                    Figure 1: Placeholder image demonstrating multimedia.
+                </figcaption>
+
+            </figure>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>
+         © 2026 Pau's Corner | Web Systems </p>
+    </footer>
+</body>
+</html>
