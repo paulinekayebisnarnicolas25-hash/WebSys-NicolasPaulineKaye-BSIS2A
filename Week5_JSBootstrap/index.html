@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pau's Corner | Bootstrap Lab</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9FB;
+            color: #3A2930;
+        }
+        .navbar-custom {
+            background-color: #8B3A62;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        .navbar-brand:hover {
+            color: #F7D6E5 !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #F7D6E5 !important;
+        }
+
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background-color: rgba(139, 58, 98, 0.75);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .carousel-caption h3 {
+            font-weight: 700;
+        }
+
+        .section-title {
+            color: #8B3A62;
+            font-weight: 700;
+        }
+
+        .about-image {
+            border-radius: 18px;
+        }
+
+        .btn-pau {
+            background-color: #8B3A62;
+            border-color: #8B3A62;
+            color: white;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+        .btn-pau:hover {
+            background-color: #6F2D4E;
+            border-color: #6F2D4E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(139, 58, 98, 0.12);
+            transition: 0.3s ease;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(139, 58, 98, 0.20);
+        }
+        .service-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            color: #8B3A62;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #8B3A62;
+        }
+        footer a {
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #F7D6E5 !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .carousel-item img {
+                height: 300px;
+            }
+            .carousel-caption {
+                padding: 10px;
+            }
+            .carousel-caption h3 {
+                font-size: 20px;
+            }
+            .carousel-caption p {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Pau's Corner ♡ </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+
+        <div id="heroCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="images/images1.jpg"
+                        class="d-block w-100"
+                        alt="Pau's Corner welcome">
+                    <div class="carousel-caption">
+                        <h3>Welcome to Pau's Corner ♡</h3> <p>
+                            Feel free to explore!
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+
+                    <img src="images/images2.jpg"
+                        class="d-block w-100"
+                        alt="Web design">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="images/images3.jpg"
+                        class="d-block w-100"
+                        alt="Creative web development">
+
+                </div>
+            </div>
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">
+                    Previous
+                </span>
+            </button>
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">
+                    Next
+                </span>
+
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="about" class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <h2 class="section-title">
+                        About Pau's Corner
+                    </h2> <p>
+                        Pau's Corner is a simple web space that showcases the use of Bootstrap.
+                    </p>
+                    <button class="btn btn-pau">
+                        Learn More
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/about.jpg"
+                        class="img-fluid about-image shadow"
+                        alt="About Pau's Corner">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container py-5">
+            <h2 class="section-title text-center mb-4">
+                My Services
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card service-card">
+                        <img src="images/service 1.jpg"
+                            class="card-img-top"
+                            alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Web Development
+                            </h5>
+                            <p class="card-text">
+                                Creating responsive and organized
+                                websites using modern web technologies.
+                            </p>
+                            <a href="#contact"
+                                class="btn btn-pau">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card service-card">
+
+                        <img src="images/service 2.jpg"
+                            class="card-img-top"
+                            alt="UI and UX Design">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                UI/UX Design
+                            </h5>
+                            <p class="card-text">
+                                Designing simple, clear, and
+                                user-friendly interfaces.
+                            </p>
+                            <a href="#contact"
+                                class="btn btn-pau">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container py-5 text-center">
+            <h2 class="section-title">
+                Get in Touch
+            </h2>
+            <p>
+                Thank you for visiting Pau's Corner!
+            </p>
+            <a href="#home"
+                class="btn btn-pau">
+                Back to Top
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="text-white py-4 mt-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 mb-3"> <h5>
+                        Pau's Corner ♡
+                    </h5>
+
+                    <p>
+                        A simple and creative space for
+                        exploring web development.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>
+                        Quick Links
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#home" class="text-white">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="text-white">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-white">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3 text-md-end">
+                    <h5>
+                        Web Systems
+                    </h5>
+                    <p>
+                        BSIS 2A
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 Pau's Corner | Web Systems
+            </p>
+
+        </div>
+    </footer>
+</body>
+</html>
