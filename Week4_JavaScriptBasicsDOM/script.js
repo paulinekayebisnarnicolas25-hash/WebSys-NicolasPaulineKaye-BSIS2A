@@ -46,7 +46,7 @@ function() {
 document.addEventListener("keydown", function (event) {
 
     if (event.key.toLowerCase() === "p") {
-        document.body.style.backgroundColor = "pink";
+        document.body.style.backgroundColor = "#F7D6E5";
     }
 
 });
