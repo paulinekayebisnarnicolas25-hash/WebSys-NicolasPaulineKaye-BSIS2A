@@ -1,30 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Local Storage - User Preferences</title>
+    <title> Pau's Corner ♡ |  User Preferences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <style>
-        body.dark-mode { background-color: black; color: white; }
+        *{ 
+            box-sizing: border-box;
+        }
+        html,body{
+            margin:0;
+            padding:0;
+            width:100%;
+            overflow-x:hidden;
+        }
+        body {
+            font-family: 'Poppins',sans-serif;
+            background-color:#FFF9FB;
+            color:#3A2930;
+            min-height:100vh;
+            transition: 0.3s ease;
+        }
+       .navbar-custom {
+        background-color: #8B3A62;
+        }
+
+        .navbar-brand {
+         color: white !important;
+        font-weight: 700;
+        }
+
+        .navbar-nav .nav-link {
+        color: white !important;
+        font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #F7D6E5 !important;
+        }
+         .navbar-toggler {
+            border-color: #F7D6E5;
+        }
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+         .preferences-section {
+            width: 100%;
+            max-width: 650px;
+            margin: 70px auto;
+            padding: 0 15px;
+        }
+        .preferences-card {
+            background-color: white;
+            border: 1px solid #F7D6E5;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 8px 20px rgba(139, 58, 98, 0.12);
+        }
+         .preferences-icon {
+            font-size: 50px;
+        }
+        .section-title {
+            color: #8B3A62;
+            font-weight: 700;
+        }
+        .description {
+            color: #6F6268;
+        }
+         .form-label {
+            color: #3A2930;
+            font-weight: 600;
+        }
+        .form-select {
+            border: 1px solid #D8B8C6;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .form-select:focus {
+            border-color: #8B3A62;
+            box-shadow: 0 0 0 0.2rem rgba(139, 58, 98, 0.15);
+        }
+        .btn-pau {
+            background-color: #8B3A62;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 11px 25px;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+        .btn-pau:hover {
+            background-color: #6F2D4E;
+            color: white;
+            transform: translateY(-2px);
+        }
+        #message {
+            min-height: 45px;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #FFF0F6;
+            color: #8B3A62;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        body.dark-mode { background-color: #181216; color: white; }
+        body.dark-mode .navbar-custom { background-color: #4D2037;}
+        body.dark-mode .preferences-card {background-color: #222;border-color: #5A3948;}
+         body.dark-mode .section-title {
+            color: #F7D6E5;
+        }
+         body.dark-mode .description {
+            color: #D8C9D0;
+        }
+        body.dark-mode .form-label {
+            color: white;
+        }
+         body.dark-mode .form-select {
+            background-color: #333;
+            color: white;
+            border-color: #666;
+        }
+         body.dark-mode #message {
+            background-color: #4D3040;
+            color: #F7D6E5;
+        }
+           body.dark-mode footer {
+            background-color: #4D2037;
+        }
+         footer {
+            background-color: #8B3A62;
+            color: white;
+        }
+
+         @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 18px;
+            }
+            .navbar-nav {
+                padding-top: 10px;
+            }
+            .navbar-nav .nav-link {
+                padding: 8px 0;
+            }
+            .preferences-section {
+                margin: 40px auto;
+            }
+            .preferences-card {
+                padding: 25px 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .preferences-icon {
+                font-size: 42px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h2>Choose Your Preferences</h2>
-    
-<label>Theme:</label>
-    <select id="theme">
-        <option value="light">Light Mode</option>
-        <option value="dark">Dark Mode</option>
-    </select>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+       <a class="navbar-brand" href="index.html">Pau's Corner ♡</a> 
+       <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="local_storage.html">
+                            Local Storage
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_preferences.html">
+                            User Preferences
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather_api.html">
+                            Weather API
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="github_api.html">
+                            GitHub API
+                     </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main class="container">
+    <div class="preferences-section"> 
+    <div class="preferences-card text-center">
+    <h1 class="section-title mt-3">  Choose Your Preferences</h1>
+     <p class="description">
+    Come and Personalize!</p>
+    <div class="text-start mt-4">
+    <label
+        for="theme"
+        class="form-label"> Theme: </label>
+<select
+    id="theme" 
+    class="form-select">
+    <option value="light"> Light Mode </option> 
+    <option value="dark">Dark Mode</option>
+</select>
+</div>
  
    
-<label>Language:</label>
-    <select id="language">
+<div class="text-start mt-4">
+    <label 
+        for="language"
+        class="form-label"> Language </label>
+        <select id="language" class="form-select">
         <option value="en">English</option>
         <option value="es">Spanish</option>
     </select>
+    </div>
  
-    <button onclick="savePreferences()">Save Preferences</button>
-    <p id="message"></p>
- 
+    <button onclick="savePreferences()"
+    class="btn btn-pau mt-4">Save Preferences</button>
+     <p id="message"></p>
+        </div>
+    </section>
+</main>
+<footer class="py-4 mt-5">
+    <div class="container text-center">
+    <p class="mb-1"> © Pau's Corner ♡ | Web Systems </p>
+    </div>
+    </footer>
+
+     <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
     <script>
         function savePreferences() {
            let theme = document.getElementById("theme").value;
@@ -32,7 +264,7 @@
            localStorage.setItem("theme", theme);
            localStorage.setItem("language", language);
            applyPreferences();
-           document.getElementById("message").innerText = "Preferences Saved!";
+           document.getElementById("message").innerText = "Preferences Saved! ♡";
         }
  
         function applyPreferences() {

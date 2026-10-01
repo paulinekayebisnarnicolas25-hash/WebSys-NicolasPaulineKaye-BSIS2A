@@ -3,19 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pau's Corner ♡ | API & Client Storage</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9FB;
+            color: #3A2930;
+        }
+        /* NAVIGATION */
+        .navbar-custom {
+            background-color: #8B3A62;
+        }
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #F7D6E5 !important;
+        }
+        .hero {
+            background: linear-gradient(
+                135deg,
+                #8B3A62,
+                #BC5086
+            );
+            color: white;
+        }
+        .hero h1 {
+            letter-spacing: 1px;
+        }
+        .hero .quote {
+            font-style: italic;
+            max-width: 750px;
+            margin: auto;
+        }
+        .section-title {
+            color: #8B3A62;
+        }
+        .activity-card {
+            border: 1px solid #F7D6E5;
+            border-radius: 15px;
+            transition: 0.3s ease;
+            background-color: white;
+        }
+        .activity-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(139, 58, 98, 0.15) !important;
+        }
+        .card-title {
+            color: #8B3A62;
+            font-weight: 600;
+        }
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        .btn-pau {
+            background-color: #8B3A62;
+            color: white;
+            border: none;
+        }
+        .btn-pau:hover {
+            background-color: #6F2D4E;
+            color: white;
+        }
+        footer {
+            background-color: #8B3A62;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #F7D6E5;
+        }
+    </style>
 </head>
-<body>
-<header class="bg-pink text-dark text-center py-5" style="background-color: #bc5086;"  > 
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"> Pau's Corner ♡</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="local_storage.html">
+                            Local Storage
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_preferences.html">
+                            Preferences
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather_api.html">
+                            Weather API
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="github_api.html">
+                            GitHub API
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header class="hero text-center py-5"> 
         <div class="container">
-         <h1 class="display-4 fw-bold">Pau's Corner</h1> 
-        <p class="lead">"You are braver than you believe, stronger than you seem and smarter than you think" - Winnie the Pooh   </p> 
+         <p class="mb-2">BSIS Web Systems</p> 
+         <h1 class="display-4 fw-bold">Welcome to Pau's Corner ♡</h1>
+        <p class="lead quote mt-3">"You are braver than you believe, stronger than you seem and smarter than you think"</p> 
+        <p class="mt-2">- Winnie the Pooh</p>
     </div> 
 </header>
     <main>
     <section class="container py-5">
         <div class="text-center mb-5">
+            <p class = "text uppercase fw-semibold mb-1" style="color: #8B3A62;">Week 6</p>
             <h2 class="fw-bold">Hello, World!</h2>
             <p class="text-muted">  
                 Welcome to my corner of the web! Explore and enjoy!
@@ -24,11 +160,11 @@
         <div class="row g-4">
         <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm">
-            <div class="card-body text-center">
+            <div class="ccard-body text-center p-4">
                 <h3 class="card-title"> Local Storage</h3>
-                <p class="card-text">
+                <p class="card-text text-muted">
                     A little corner so your data can stay!</p>
-                <a href="local_storage.html"class="btn btn-secondary">
+                <a href="local_storage.html"class="btn btn-pau">
                     View Local Storage
                     </a>
             </div>
@@ -37,25 +173,25 @@
         </div>
         <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
-        <div class="card-body text-center"> <h3 class="card-title">  User Preferences</h3>
+        <div class="card-body text-center p-4"> <h3 class="card-title h5">  User Preferences</h3>
             <p class="card-text">
              Let's make the experience as special as you!
             </p>
               <a href="user_preferences.html"
-                class="btn btn-success">
+                class="btn btn-pau">
                  View Preferences
                 </a>
                     </div>
                 </div>
             </div>
         <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm">
-        <div class="card-body text-center">
-                <h3 class="card-title">Weather API
+        <div class="card activity-cardh-100 shadow-sm">
+        <div class="card-body text-center p-4">
+                <h3 class="card-title h5">Weather API
                 </h3>
                 <p class="card-text"> 
                     Don't forget to bring an umbrella!</p>
-                <a href="weather_api.html" class="btn btn-warning">
+                <a href="weather_api.html" class="btn btn-pau">
                     View Weather API
                      </a>
                 </div>
@@ -63,12 +199,12 @@
         </div>
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <h3 class="card-title">GitHub API </h3>
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title h5">GitHub API </h3>
                     <p class="card-text"> Be as curious as you want, but don't forget to be responsible!
                         </p>
             <a href="github_api.html"
-                           class="btn btn-danger">View GitHub API
+                           class="btn btn-pau">View GitHub API
                     </a>
                 </div>
             </div>
@@ -97,6 +233,7 @@
     </div>
     </div>
     <hr>
-    <p class="text-center">&copy; 2026 Pau's Corner. All Rights Reserved.</p>
+    <p class="text-center">&copy; 2026 Pau's Corner ♡ |
+                Web Systems</p>
   </div>
 </footer>
