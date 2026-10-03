@@ -1,0 +1,139 @@
+:root {
+  --main-pink: #8B3A62;
+  --soft-pink: #F7D6E5;
+  --background: #FFF9FB;
+  --text: #3A2930;
+  --muted: #806D75;
+  --white: #FFFFFF;
+  --border: #E8CBD7;
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background-color: var(--main-pink) !important;
+  padding: 16px 0;
+  box-shadow: 0 3px 12px rgba(139, 58, 98, 0.15);
+}
+
+.navbar-brand {
+  color: var(--white) !important;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.navbar-brand:hover {
+  color: var(--soft-pink) !important;
+}
+
+
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  background-color: var(--white);
+  box-shadow: 0 5px 20px rgba(139, 58, 98, 0.10) !important;
+}
+
+.card-body {
+  padding: 28px;
+}
+
+.card-title {
+  color: var(--main-pink);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.form-control {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 13px;
+  color: var(--text);
+  background-color: #fff;
+}
+
+.form-control::placeholder {
+  color: #B9A4AC;
+}
+
+.form-control:focus {
+  border-color: var(--main-pink);
+  box-shadow: 0 0 0 0.2rem rgba(139, 58, 98, 0.12);
+}
+
+.btn-primary {
+  background-color: var(--main-pink) !important;
+  border-color: var(--main-pink) !important;
+  border-radius: 10px;
+  padding: 11px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #702E4F !important;
+  border-color: #702E4F !important;
+}
+
+#userList {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#userList .list-group-item {
+  background-color: var(--background);
+  border: none;
+  border-bottom: 1px solid #F1E1E7;
+  padding: 15px;
+  color: var(--text);
+}
+
+#userList .list-group-item:last-child {
+  border-bottom: none;
+}
+
+#userList .fw-semibold {
+  color: var(--main-pink);
+  font-weight: 600 !important;
+}
+
+#userList .text-muted {
+  color: var(--muted) !important;
+}
+
+#userList .btn-outline-danger {
+  color: var(--main-pink);
+  border-color: #D9AFC0;
+  border-radius: 8px;
+}
+
+#userList .btn-outline-danger:hover {
+  background-color: var(--main-pink);
+  border-color: var(--main-pink);
+  color: white;
+}
+
+#msg .alert {
+  border-radius: 10px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 22px;
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+}
