@@ -5,6 +5,9 @@ require("dotenv").config();
 
 const usersRouter = require("./routes/users");
 
+const productsRouter = require("./routes/products");
+const ordersRouter = require("./routes/orders");
+
 const app = express();
 
 // Body parsers (required so req.body will not be undefined)
@@ -16,6 +19,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // API routes
 app.use("/api/users", usersRouter);
+
+app.use("/api/products", productsRouter);
+app.use("/api/orders", ordersRouter);
 
 // Test route
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
