@@ -4,9 +4,9 @@ const path = require("path");
 require("dotenv").config();
 
 const usersRouter = require("./routes/users");
-
 const productsRouter = require("./routes/products");
 const ordersRouter = require("./routes/orders");
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.use("/api/users", usersRouter);
 
 app.use("/api/products", productsRouter);
 app.use("/api/orders", ordersRouter);
-
+app.use("/api/auth", authRoutes);
 // Test route
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
