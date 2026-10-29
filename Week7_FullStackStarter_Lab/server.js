@@ -33,6 +33,18 @@ await mongoose.connect(process.env.MONGO_URI);
 console.log("MongoDB connected");
 
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('Welcome to My Deployed App');
+});
+
+app.get('/status', (req, res) => {
+  res.json({
+    status: 'ok',
+    uptime: process.uptime(),
+    database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
+    time: new Date().toISOString()
+  });
+});
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 } catch (err) {
 console.error("Startup error:", err.message);
