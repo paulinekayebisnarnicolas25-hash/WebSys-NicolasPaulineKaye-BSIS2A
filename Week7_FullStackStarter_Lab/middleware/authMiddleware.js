@@ -1,20 +1,14 @@
-exports.protect = (req, res, next) => {
-  // For now, simple simulation
-  const userRole = req.headers.role;
+const jwt = require('jsonwebtoken');
 
-  if (!userRole) {
-    return res.status(401).json({ message: 'Unauthorized' });
+module.exports = (req, res, next) => {
+  const header = req.headers.authorization;
+  if (!header || !header.startsWith('Bearer ')) {
+    return res.status(401).json({ message: 'Unauthorized access' });
   }
-
-  req.user = { role: userRole };
-  next();
-};
-
-exports.authorize = (...roles) => {
-  return (req, res, next) => {
-    if (!roles.includes(req.user.role)) {
-      return res.status(403).json({ message: 'Forbidden' });
-    }
+  try {
+    req.user = jwt.verify(header.split(' ')[1], process.env.JWT_SECRET);
     next();
-  };
+  } catch {
+    return res.status(401).json({ message: 'Invalid or expired token' });
+  }
 };
