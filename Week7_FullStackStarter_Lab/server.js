@@ -13,7 +13,20 @@ const protect = require('./middleware/authMiddleware');
 
 const app = express();
 
-app.use(helmet());
+// Helmet with the Bootstrap CDN allowed (needed for the PWA service worker)
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+      connectSrc: ["'self'", "https://cdn.jsdelivr.net"],
+      imgSrc: ["'self'", "data:"],
+      manifestSrc: ["'self'"],
+      workerSrc: ["'self'"]
+    }
+  }
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
