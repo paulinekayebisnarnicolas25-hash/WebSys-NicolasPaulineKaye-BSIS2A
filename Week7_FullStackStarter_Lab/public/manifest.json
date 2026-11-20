@@ -1,0 +1,22 @@
+{
+  "name": "Pau's Corner",
+  "short_name": "Pau's Corner",
+  "description": "Pau's Corner - installable web app with offline support",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B3A62",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
